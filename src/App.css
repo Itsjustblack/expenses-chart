@@ -1,84 +1,86 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
-*, *::before, *::after{
-    box-sizing: border-box;
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap");
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
 }
-*{
-    margin: 0;
+* {
+	margin: 0;
 }
-body{
-    font-family: "DM Sans", sans-serif;
-    background: hsl(27, 66%, 92%);
+body {
+	font-family: "DM Sans", sans-serif;
+	background: hsl(27, 66%, 92%);
 }
-h2{
-    padding-bottom: 0.5rem;
+h2 {
+	padding-bottom: 0.5rem;
 }
-h3{
-    font-size: 1.7rem;
+h3 {
+	font-size: 1.7rem;
 }
-h4{
-    font-size: 1rem;
+h4 {
+	font-size: 1rem;
 }
-p{
-    opacity: 0.6;
-    font-size: 0.9rem;
-    margin: 0.2rem 0;
+p {
+	opacity: 0.6;
+	font-size: 0.9rem;
+	margin: 0.2rem 0;
 }
-header{
-    margin-top: 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: rgba(236, 119, 95);
-    border-radius: 10px;
-    padding: 1rem;
-    color: white;
-    margin-bottom: 1rem;
+header {
+	margin-top: 2rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background: rgba(236, 119, 95);
+	border-radius: 10px;
+	padding: 1rem;
+	color: white;
+	margin-bottom: 1rem;
 }
-header span{
-    display: block;
-    margin-bottom: 0.2rem;
+header span {
+	display: block;
+	margin-bottom: 0.2rem;
 }
-header .title{
-    margin-bottom: 0.85rem;
+header .title {
+	margin-bottom: 0.85rem;
 }
-main{
-    background: white;
-    color: rgb(56, 35, 20);
-    border-radius: 10px;
-    text-align: center;
-    padding: 1rem;
-    margin-bottom: 1rem;
+main {
+	background: white;
+	color: rgb(56, 35, 20);
+	border-radius: 10px;
+	text-align: center;
+	padding: 1rem;
+	margin-bottom: 1rem;
 }
-.container{
-    margin-left: 1rem;
-    margin-right: 1rem;
+.container {
+	margin-left: 1rem;
+	margin-right: 1rem;
 }
-.total{
-    display: block;
-    font-size: 1.5rem;
-    font-weight: 700;
-    letter-spacing: 1px;
+.total {
+	display: block;
+	font-size: 1.5rem;
+	font-weight: 700;
+	letter-spacing: 1px;
 }
-.month{
-    text-align: left;
+.month {
+	text-align: left;
 }
-.lastmonth{
-    text-align: right;
+.lastmonth {
+	text-align: right;
 }
-.line{
-    border-bottom: 1px solid rgba(236, 119, 95, 0.3);   
-    margin: 1rem 0;
+.line {
+	border-bottom: 1px solid rgba(236, 119, 95, 0.3);
+	margin: 1rem 0;
 }
-.footer{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+.footer {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
 }
 .attribution {
-    font-size: 11px;
-    text-align: center;
+	font-size: 11px;
+	text-align: center;
 }
 .attribution a {
-    color: hsl(228, 45%, 44%);
+	color: hsl(228, 45%, 44%);
 }
