@@ -8,13 +8,11 @@ const App = () => {
 	const { Expenses } = values;
 	const [days, setDays] = useState(null);
 	const [data, setData] = useState(null);
-	const [isPending, setIsPending] = useState(true);
 	const [total, setTotal] = useState(0);
 
 	useEffect(() => {
 		setDays(Expenses.map((item) => item.day));
 		setData(Expenses.map((item) => item.amount));
-		setIsPending(false);
 	}, []);
 
 	useEffect(() => {
@@ -36,7 +34,6 @@ const App = () => {
 				</header>
 				<main>
 					<h2>Spending - Last 7 Days</h2>
-					{/* {isPending && <div>...Loading...</div>} Change to Loading Circle */}
 					{
 						<BarChart
 							days={days}

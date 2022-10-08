@@ -67,7 +67,7 @@ const BarChart = ({ days, data: amounts }) => {
 	}, [amounts]);
 	return (
 		<Bar
-			height={220}
+			height={200}
 			data={data}
 			options={options}
 		/>
