@@ -3,8 +3,7 @@ import Chart from 'chart.js/auto';
 import { Bar } from "react-chartjs-2"
 // import { faker } from '@faker-js/faker';
 
-let delayed;
-const options = {
+const options = { // Dont allow color change when Click on bars
   responsive: true,
   scales: {
     x: {
@@ -21,14 +20,11 @@ const options = {
     }
   },
   plugins:{
-    animation: {
-      delay: 0.2
-    },
-    callbacks: {
-        title : () => null,
-        beforeBody: () => '$'
-      },
     tooltip: {
+      // callbacks: {
+      //   title : () => null,
+      //   beforeBody: () => '$'
+      // },
       bodyAlign: 'left',
       boxWidth: 10,
       backgroundColor: 'rgb(56, 35, 20)',
@@ -65,7 +61,7 @@ const BarChart = ({days, data: amounts}) => {
     if(amounts){
       const max = amounts.indexOf(Math.max(...amounts));
       bgColor[max] = "hsl(186, 34%, 60%)";
-      console.log(bgColor);
+      // console.log(bgColor);
     }
   }, [amounts]);
     return(

@@ -1,13 +1,22 @@
 import { useEffect, useState } from 'react';
-import useFetch from './useFetch';
 import BarChart from './components/BarChart';
 import logo from './images/logo.svg';
+import values from "./data.json";
 import './App.css';
 
 const App = () => {
-  const { days, data, isPending } = useFetch('http://localhost:8000/Expenses');
+  const { Expenses } = values;
+  const [days, setDays] = useState(null);
+  const [data, setData] = useState(null);
+  const [isPending, setIsPending] = useState(true);
   const [total, setTotal] = useState(0);
 
+  useEffect(() => {
+    setDays(Expenses.map(item => item.day));
+    setData(Expenses.map(item => item.amount));
+    setIsPending(false);
+  }, []);
+  
   useEffect(() => {
     data ? setTotal(data.reduce((a,b) => a + b)) : setTotal(0)
   }, [data]);
@@ -27,10 +36,10 @@ const App = () => {
         <main>
           <h2>Spending - Last 7 Days</h2>
             {/* {isPending && <div>...Loading...</div>} Change to Loading Circle */}
-            {/* {<BarChart days={days}  data={data}/>}   */}
+            {<BarChart days={days}  data={data}/>}  
           <div className="line"></div>
           <div className="footer">
-            <div>
+            <div className='month'>
               <p>Total this Month</p>
               <h3>{"$" + total}</h3>
             </div>
