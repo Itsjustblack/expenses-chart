@@ -53,6 +53,7 @@ const BarChart = ({ days, data: amounts }) => {
 			{
 				data: amounts,
 				backgroundColor: bgColor,
+				hoverBackgroundColor: bgColor,
 				borderRadius: 3,
 			},
 		],
